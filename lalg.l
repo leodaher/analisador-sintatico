@@ -21,6 +21,7 @@ digit [0-9]
 letter [a-zA-Z]
 num_int -?{digit}({digit})*
 num_real -?{digit}+"."{digit}+
+malform_num_real -?{digit}+"."{letter}{digit}*
 word [a-zA-Z][a-zA-Z0-9]*
 comment "{".*"}"
 
@@ -28,6 +29,7 @@ comment "{".*"}"
 {word} {check_reserved_words(yytext, yyleng);}
 {num_int} {printf("%s - num_int \n",yytext);} 
 {num_real} {printf("%s - num_real \n",yytext);}
+{malform_num_real} {printf("%s - erro\n", yytext);}
 {comment} ;
 ";" {printf("; - simb_ponto_virgula\n");}
 "." {printf(". - simb_ponto\n");}
