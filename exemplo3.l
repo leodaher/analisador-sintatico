@@ -14,7 +14,7 @@ num_real -?{digit}+"."{digit}+
 ":" {printf(": - simb_dois_ponto\n");}
 "(" {printf("( - simb_abre_parentese\n");}
 ")" {printf(") - simb_fecha_parentese\n");}
-"" ;
+" " {printf("");}
 . printf("%s - erro\n",yytext);
 
 %%
