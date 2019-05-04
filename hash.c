@@ -41,9 +41,9 @@ int hash(char *palavra){
 }
 
 
-//Palavras reservadas estruturadas na table Hash
+// Palavras reservadas estruturadas na table Hash
 int verifyTable(char * palavra, int * table){
-	//verifica se o valor esta na table hash
+	// verifica se o valor esta na table hash
 	if (table[hash(palavra)] == 1) {
 		return 1;
 	}
