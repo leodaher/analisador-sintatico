@@ -5,3 +5,6 @@ main: lex lalg.l
 	
 lex: lalg.l
 	lex lalg.l
+
+run: 
+	./main input.txt
