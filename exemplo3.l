@@ -1,17 +1,21 @@
 digit [0-9]
 letter [a-zA-Z]
+palavra {letter}+
+num_int -?{digit}({digit})*
+num_real -?{digit}+"."{digit}+
+
 %%
+
+{num_int} {printf("%s - num_int \n",yytext);} 
+{num_real} {printf("%s - num_real \n",yytext);}
 ";" {printf("; - simb_ponto_virgula\n");}
 "." {printf(". - simb_ponto\n");}
 "," {printf(", - simb_virgula\n");}
 ":" {printf(": - simb_dois_ponto\n");}
 "(" {printf("( - simb_abre_parentese\n");}
 ")" {printf(") - simb_fecha_parentese\n");}
-
-
-
-
-
+"" ;
+. printf("%s - erro\n",yytext);
 
 %%
 
