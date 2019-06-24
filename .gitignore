@@ -1,0 +1,4 @@
+lex.yy.c
+main
+y.tab.c
+y.tab.h

@@ -1,8 +1,8 @@
-# Lexical analyzer
+# Sintatical analyzer
 
-This is a lexical analyzer for the languge LALG, implemented in C, using
-Lex/Flex. Before running the program, make sure you create a file named
-'input.txt' with the code you want to analyze. 
+This is a sintatical analyzer for the languge LALG, implemented in C, using
+YACC. Before running the program, make sure you create a file named 'input.txt' 
+with the code you want to analyze. 
 
 To compile, run
 ```

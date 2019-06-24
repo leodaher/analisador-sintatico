@@ -62,13 +62,10 @@ special_character [;\.,:\(\)=\>\<\+\-\*\/]
 
 %%
 {word} {return check_reserved_words(yytext, yyleng);}
-{num_int} {
-	printf("NUM_INT\n");
-	return NUM_INT;
-}
+{num_int} return NUM_INT;
 {num_real} return NUM_REAL;
 {comment} ;
 {special_character} return yytext[0];
-\n	;
-[ \t]+ ;
+[ \t\n]+ ;
+. {printf("%s - Erro na análise léxica\n", yytext);}
 %%
